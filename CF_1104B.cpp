@@ -22,4 +22,20 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	string s;cin>>s;
+	ll i,c=0;ll n=s.length();
+	stack<char> v;
+	
+	for (i=0;i<n;i++)
+	{
+		if (v.empty())
+			v.push(s[i]);
+		else if (s[i]==v.top())
+		{
+			c++;v.pop();
+		}
+		else	v.push(s[i]);
+	}
+	if (c%2==1)	cout<<"Yes"<<endl;
+	else	cout<<"No"<<endl;
 }

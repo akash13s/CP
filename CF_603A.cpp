@@ -1,5 +1,4 @@
 //AUTHOR: *Akash Shrivastva*
-//Birla Institute of Technology,Mesra,India
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -22,4 +21,13 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll n,i,l=1;cin>>n;
+	string s;cin>>s;
+	char c=s[0];
+	for (i=1;i<n;i++)
+	{
+		if (s[i]!=c)
+			l++,c=s[i];
+	}
+	cout<<min(l+2,n)<<endl;
 }

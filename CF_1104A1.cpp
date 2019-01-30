@@ -22,4 +22,8 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll n;cin>>n;
+	ll i;
+	cout<<n<<endl;
+	for (i=1;i<=n;i++)	cout<<1<<" ";
 }

@@ -22,4 +22,29 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll q;cin>>q;
+	while (q--)
+	{
+		ll l;cin>>l;
+		string s;cin>>s;ll i,n1,n2;
+		if (l==2)
+		{
+			n1=s[0]-'0';
+			n2=s[1]-'0';
+			if (n2>n1)
+			{
+				cout<<"YES"<<endl;
+				cout<<2<<endl;
+				cout<<n1<<" "<<n2<<endl;
+			}
+			else	cout<<"NO"<<endl;
+		}
+		else
+		{
+			string s2=s.substr(1);
+			cout<<"YES"<<endl;
+			cout<<2<<endl;
+			cout<<s[0]<<" "<<s2<<endl;
+		}
+	}
 }

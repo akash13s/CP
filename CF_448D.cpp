@@ -22,4 +22,16 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+    ll n,m,k;cin>>n>>m>>k;
+    ll lb=1,up=n*m,mid,i,sm;
+    while (lb<up)
+    {
+        sm=0;
+        mid=(lb+up)>>1;
+        for (i=1;i<=n;i++)
+            sm+=min(mid/i,m);
+        if (sm>=k)  up=mid;
+        else    lb=mid+1;
+    }
+    cout<<lb<<endl;
 }

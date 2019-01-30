@@ -22,4 +22,47 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll n,k;cin>>n>>k;
+	ll i,t,g;string s;cin>>s;
+	for (i=0;i<n;i++)
+	{
+		if (s[i]=='G')	g=i;
+		if (s[i]=='T')	t=i;
+	}
+	ll c=0,f=0;
+	if (t>g)
+	{
+		for (i=g;i<n;i+=k)
+		{
+			if (s[i]=='#')
+			{
+				c++;break;
+			}
+			if (s[i]=='T')
+			{
+				f++;
+				break;
+			}	
+		}
+	}
+	else
+	{
+		for (i=g;i>=0;i-=k)
+		{
+			if (s[i]=='#')
+			{
+				c++;break;
+			}
+			if (s[i]=='T')
+			{
+				f++;
+				break;
+			}	
+		}
+	}
+	if (c)	cout<<"NO";
+	else{
+		if (f)	cout<<"YES";
+		else	cout<<"NO";
+	}	
 }

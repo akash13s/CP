@@ -1,5 +1,4 @@
 //AUTHOR: *Akash Shrivastva*
-//Birla Institute of Technology,Mesra,India
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -22,4 +21,16 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll n;cin>>n;
+	ld sq=sqrt(n);
+	if (sq-floor(sq)==0)
+		cout<<2*sqrt(n)<<endl;
+	else
+	{
+		ll n1=sqrt(n);ll ans;
+		if (n<=n1*n1+n1)	ans=2*n1+1;
+		else	ans=2*n1+2;
+		cout<<ans<<endl;
+	}
+
 }

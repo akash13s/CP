@@ -22,4 +22,12 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+
+	ll q;cin>>q;
+	while (q--)
+	{
+		ll k,x;cin>>k>>x;
+		ll ans=x+(k-1)*9;
+		cout<<ans<<endl;
+	}
 }

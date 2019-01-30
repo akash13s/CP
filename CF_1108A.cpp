@@ -22,4 +22,12 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+	ll q;cin>>q;
+	while (q--)
+	{
+		ll l1,r1,l2,r2;cin>>l1>>r1>>l2>>r2;
+		if (l1==r2)	cout<<l1<<" "<<l2<<endl;
+		else if (l2==r1)	cout<<l1<<" "<<r2<<endl;
+		else	cout<<l1<<" "<<r2<<endl;
+	}
 }

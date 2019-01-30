@@ -1,5 +1,4 @@
 //AUTHOR: *Akash Shrivastva*
-//Birla Institute of Technology,Mesra,India
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -22,4 +21,17 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
+    string s;cin>>s;
+    ll i,c=0,n,ans=0;n=s.length();
+    for (i=n-1;i>=0;i--)
+    {
+    	if (s[i]=='b')
+    		c++;
+    	else
+    	{
+    		ans+=c;ans%=M;
+    		c=2*c;c%=M;
+    	}	
+    }
+    cout<<ans%M<<endl;
 }
