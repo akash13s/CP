@@ -1,4 +1,5 @@
 //AUTHOR: *Akash Shrivastva*
+//Birla Institute of Technology,Mesra,India
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -11,8 +12,7 @@ typedef long double ld;
 #define F first
 #define S second
 #define PII pair <ll,ll>
-#include <iostream>   // std::cout
-#include <string> 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -22,6 +22,27 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 	#endif
-	ll a,b;char c;cin>>a>>c>>b;
-	cout<<a<<" "<<c<<" "<<b<<endl;
+	ll n,m;cin>>n>>m;
+	if (m%n!=0)	cout<<-1<<endl;
+	else
+	{
+		ll c=0;
+		// cout<<m/n<<endl;
+		ll flag=0;
+		m/=n;
+		while (m>1)
+		{
+			// cout<<m<<endl;
+			if (m%2==0)
+				m/=2,c++;
+			else if (m%3==0)
+				m/=3,c++;
+			else{
+				flag=1;
+				break;
+			}
+		}
+		if (flag)	cout<<-1<<endl;
+		else	cout<<c<<endl;
+	}
 }
