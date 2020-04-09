@@ -1,48 +1,29 @@
+//AUTHOR: *Akash Shrivastva*
+//Birla Institute of Technology,Mesra,India
 #include<bits/stdc++.h>
 using namespace std;
-
-int check(int x,int n)
-{
-    if (x*x+x>=n) return 1;
-    else  return 0;
-}
-void isKthBitSet(int n, int k) 
-{ 
-  if (n & (1 << (k - 1))) 
-    cout << "SET"; 
-  else
-    cout << "NOT SET"; 
-} 
-
-// Driver code 
+typedef long long int ll;
+typedef long double ld;
+#define M 1000000007
+#define mp make_pair
+#define pb push_back
+#define vll vector<ll>
+#define pll vector< pair <ll,ll> >
+#define F first
+#define S second
+#define PII pair <ll,ll>
+ll a[10000000];
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-// Driver code 
-   
-    int k=31 & 31 & 83 & 127;
-    cout<<k<<endl; 
-    return 0; 
-    // cout<<log2(2000000000)<<endl;
+    
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+	#endif
+	ll i;
+	memset(a,-1,sizeof(a));
+	for (i=0;i<10000000;i++)	cout<<a[i]+1<<endl;
+	cout<<"Hello"<<endl;
 }
-
-
-// int dp[100005][5];
-// int f(int i,int j,vector <int> &a)
-// {
-//     if (dp[i][j]!=-1)   return dp[i][j];
-//     if (j<=0)   return INT_MAX;
-//     if (i==a.size() and j!=0)   return 0;
-//     else
-//     {
-//         dp[i][j]=max(f(i+1,j,a),a[i]&f(i+1,j-1,a));
-//         return dp[i][j];   
-//     }
-// }
-
-// int Solution::solve(vector<int> &A) {
-//     dp[A.size()][5];
-//     memset(dp,-1,sizeof(dp));
-//     return f(0,4,A);
-// }

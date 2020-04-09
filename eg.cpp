@@ -4,10 +4,10 @@ typedef long long int ll;
 typedef long double ld;
 // Define the number of runs for the test data 
 // generated 
-#define RUN 100000
+#define RUN 10
   
 // Define the range of the test data generated 
-#define MAX1 5000000
+#define MAX1 100
   
 int main() 
 { 
@@ -25,12 +25,19 @@ int main()
     // For random values every time 
     srand(time(NULL)); 
     ll i;
+    cout<<RUN<<endl;
     for (i=1;i<=RUN;i++)
     {
         ll a=rand()%MAX1+1;
-        ll b=rand()%MAX1+1;
-        if (a>=b)   cout<<b<<" "<<a<<endl;
-        else    cout<<a<<" "<<b<<endl;
+        cout<<a<<" ";
+       
+    }
+    cout<<endl;
+    for (i=1;i<=RUN;i++)
+    {
+        ll a=rand()%MAX1+1;
+        cout<<a<<" ";
+        
     }
     //fclose(stdout); 
     return(0); 
